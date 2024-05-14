@@ -10,14 +10,14 @@ export class AddCharacterComponent {
   @Output()
   public onNewCharacter: EventEmitter<Character> = new EventEmitter()
 
-  public character: Character = {name: '', power: 0}
+  public character: Character = {id: '', name: '', power: 0}
 
 
   emitCharacter():void {
     if (this.character.name === "") return
 
     this.onNewCharacter.emit(this.character)
-    this.character = { name: "", power: 0 }
+    this.character = { id: '', name: "", power: 0 }
   }
 
 }
